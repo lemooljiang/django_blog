@@ -1,5 +1,6 @@
 {% load custom %}
-{% csrf_token %}
+{% load markdown_deux_tags %}
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -60,7 +61,7 @@
         </div>
         <div class="article-content">
 
-            {{ article_obj.content|safe }}
+            {{ article_obj.content | markdown }}
         </div>
 
 
